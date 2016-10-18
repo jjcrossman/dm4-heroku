@@ -1,0 +1,14 @@
+.hello-wrapper {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	font-family: sans-serif;
+	justify-content: center;
+	margin: 0 auto;
+	width: 80%;
+}
+
+.hello-wrapper input {
+	font-size: 2em;
+	width: 90%;
+}
