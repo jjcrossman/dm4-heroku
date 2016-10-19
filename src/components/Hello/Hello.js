@@ -8,3 +8,6 @@ export default function Hello() {
 		, template: HelloHTML
 	}
 }
+
+// Hello.$inject = [ "$scope", "$http" ];
+//This is needed if using webpack -p

@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node index.js"
+    , "dev":
+    , "build-prod": "webpack -p"
+  },
+  "engines": {
+    "node": "6.7.0"
+  },
   "keywords": [],
   "author": "Ryan Walsh <ryan@thehatrack.net> (https://twitter.com/_rtwalsh)",
   "license": "ISC",

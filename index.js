@@ -4,8 +4,10 @@ const mongoose = require( "mongoose" );
 const session = require( "express-session" );
 const app = express();
 const sessionConfig = require( "./config/sessionConfig" );
-const port = 9000;
-const mongoUri = "mongodb://localhost:27017/mydb";
+const port = process.env.PORT ? process.env.PORT : 9000;
+const mongoUri = process.env.MONGOURI ? process.env.MONGOURI : "mongodb://localhost:27017/mydb";
+
+// / You might also use process.env.PRODUCTION
 
 app.use( session( sessionConfig ) );
 app.use( json() );
@@ -15,3 +17,5 @@ mongoose.connect( mongoUri );
 mongoose.connection.once( "open", () => console.log( `Mongoose connected to mongoDB at ${ mongoUri }` ) );
 
 app.listen( port, () => console.log( `Express listening on ${ port }` ) );
+
+// ng-annotate-loader, can protect you from minificaiton errors coming from Angular brackets?

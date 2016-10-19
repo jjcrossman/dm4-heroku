@@ -1,5 +1,5 @@
 module.exports = {
 	  resave: false
 	, saveUninitialized: true
-	, secret: "keyboard cat"
+	, secret: process.env.SESSION_SECRET || "keyboard cat"
 };
